@@ -20,6 +20,6 @@
 
 $x = $_POST["x"];
 $total = null;
-$total = abs($x);
+$total = round($x);
 echo $total;
 ?>
