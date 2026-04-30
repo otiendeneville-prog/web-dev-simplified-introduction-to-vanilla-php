@@ -1,20 +1,15 @@
 <?php
 
-$name =  "Neuville";
-$age = 21;
-$food = "pizza";
+$x = 10;
+$y = 3;
+$z = null;
+ $z = $x * $y;
 
-$gpa = 2.33;
-$tax_rate = 5.21;
-$price = 23.34;
+ $x = 4;
+ $y = 6;
+ $z = null;
 
+ $z = $x % $y;
 
-echo "My name is {$name} <br>";
-echo "I am {$age} <br>";
-echo "I like {$food}";
-
-
-echo"You gpa is {$gpa} <br>";
-echo"The tax rate currently is {$tax_rate}% <br>";
-echo"The price is \${$price}";
+ echo $z;
 ?>
