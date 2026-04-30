@@ -1,20 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="index.php" method="get">
+<label>Username:</label><br>
+<input type="text" name="username"><br>
+<label>Password:</label><br>
+<input type="password"name="password"><br>
+<input type="submit" value="submit">
+    </form>
+</body>
+</html>
+
 <?php
 
-$x = 10;
-$y = 3;
-$z = null;
- $z = $x * $y;
-
- $counter = 0;
-
- $counter++;
- echo $counter;
-
- $x = 4;
- $y = 6;
- $z = null;
-
- $z = $x % $y;
-
- echo $z;
+ echo "{$_GET["username"]}<br>";
+ echo "{$_GET["password"]}<br>";
 ?>
