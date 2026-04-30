@@ -1,8 +1,4 @@
 
-<?php
-session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +7,10 @@ session_start();
     <title>Document</title>
 </head>
 <body>
-    This the home Page
-    <a href="contact.php">This goes to contact page</a>
+    <button>Button</button>
 </body>
 </html>
+<?php
+echo"Hello World <br>";
+echo "Introduction to php";
+?>
