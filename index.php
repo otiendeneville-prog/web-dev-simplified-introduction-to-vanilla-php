@@ -1,28 +1,17 @@
 
 <?php
 
-$grade ="F";
+$date = date("l");
+$date = "Tuesday";
 
-switch($grade){
-    case "A";
-    echo"You did great";
+switch($date){
+    case "Monday":
+    echo"I hate Monday";
     break;
 
-    case"B";
-    echo"You did good";
+    case"Tuesday":
+    echo"It's tacco Tuesday";
     break;
-
-    case "C";
-    echo"You did okay";
-    break;
-
-    case"D";
-    echo"You did poorly";
-    break;
-
-    case"F";
-    echo"You failed";
-    
 }
-
+    
 ?>
