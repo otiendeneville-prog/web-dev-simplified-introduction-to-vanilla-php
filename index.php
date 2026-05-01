@@ -3,12 +3,10 @@
 
 $temp = -2;
 
-if ($temp >= 0 && $temp <= 30){
-echo"The weather is good";
+if ($temp <0 || $temp > 30){
+echo"The weather is bad";
 }
 else{
-    echo"The weather is bad";
+    echo"The weather is good";
 }
-
-
 ?>
