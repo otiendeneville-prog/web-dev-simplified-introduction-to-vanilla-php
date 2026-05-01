@@ -1,19 +1,14 @@
 
 <?php
-$hours = 50;
-$rate = 15;
-$weekly_pay = null;
 
-if($hours <=0){
-    $weekly_pay = 0;
-}
-elseif($hours <= 40){
-    $weekly_pay = $hours * $rate; 
+$temp = -2;
+
+if ($temp >= 0 && $temp <= 30){
+echo"The weather is good";
 }
 else{
-    $weekly_pay = ($rate * 40) +(($hours-40)) *($rate*1.5);
+    echo"The weather is bad";
 }
 
-echo"You made \${$weekly_pay} this week"
 
 ?>
