@@ -1,20 +1,28 @@
 
 <?php
 
-$temp = 10000;
-$cloudy = false;
+$grade ="F";
 
-if ($temp <0 || $temp > 30){
-echo"The weather is bad. <br>";
-}
-else{
-    echo"The weather is good. <br>";
-}
-if(!$cloudy){
-    echo"It's Sunny.";
+switch($grade){
+    case "A";
+    echo"You did great";
+    break;
+
+    case"B";
+    echo"You did good";
+    break;
+
+    case "C";
+    echo"You did okay";
+    break;
+
+    case"D";
+    echo"You did poorly";
+    break;
+
+    case"F";
+    echo"You failed";
+    
 }
 
-else{
-    echo"It's cloudy.";
-}
 ?>
