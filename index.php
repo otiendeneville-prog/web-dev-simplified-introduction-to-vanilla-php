@@ -21,7 +21,9 @@
 $capitals = array("USA"=>"Washington DC",
 "Japan"=>"Kyoto",
 "South Korea"=>"Seaul",
-"India"=>"New Delhi");
+"India"=>"New Delhi",
+"Kenya" =>"Nairobi",
+);
 
 $capital = $capitals[$_POST["country"]];
 
