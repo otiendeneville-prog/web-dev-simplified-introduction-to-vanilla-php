@@ -2,7 +2,7 @@
 <?php
 
 $date = date("l");
-$date = "Sunday";
+$date = "pizza";
 
 switch ($date) {
     case "Monday":
@@ -30,10 +30,10 @@ switch ($date) {
         break;
 
     case "Sunday":
-        echo "Time to relax";
+        echo "Time to relax <br>";
 
     default:
-        echo "That's not a valid day";
+        echo "Not a valid day, enter a valid day";
         break;
 }
 ?>
