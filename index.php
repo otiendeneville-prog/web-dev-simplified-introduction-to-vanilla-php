@@ -1,10 +1,11 @@
 <?php
-$foods = array("apple","banana","orange","coconut");
-array_push($foods, "pineapple","kiwi");
+$capitals = array("USA"=>"Washington DC",
+"Japan"=>"Kyoto",
+"South Korea"=>"Seaul",
+"India"=>"New Delhi");
 
-foreach($foods as $food){
-    echo $food ."<br>";
+foreach($capitals as $key =>$value){
+    echo "{$key} ={$value} <br>";
+
 }
-
-
 ?>
