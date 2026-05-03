@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,38 +7,24 @@
 </head>
 <body>
     <form action="index.php" method="post">
-        <label>Username:</label><br>
-        <input type="text" name="username"><br>
-        <label>Password:</label><br>
-        <input type="password" name="password"><br>
-        <input type="submit" name="login" value="Login">
+       <input type="radio" name="credit_card" value="Visa">Visa.<br>
+       <input type="radio" name="credit_card" value="Mastercard">Mastercard.<br>
+       <input type="radio" name="credit_card" value="American Express">American Express.<br> 
+       <input type="submit" name="confirm" value="confirm">   
     </form>
 </body>
 </html>
 
-
 <?php
 
+if(isset($_POST["confirm"])){
 
-
-if(isset($_POST["login"])){
-
-$username = $_POST["username"];
-$password =$_POST["password"];
-
-if(empty($username)){
-    echo"Username is missing";
-    }
-    else{
-        echo"Hello {$username} <br>";
-    }
-
-    if(empty($password)){
-        echo"Password is missing";
-
-    }
-    else"Password is entered";
-
+if(isset($_POST["credit_card"])){
+    $credit_card = $_POST["credit_card"];
+    echo $credit_card;
 }
-
+else{
+    echo"Please make a selection to enter:";
+}
+}
 ?>
