@@ -4,13 +4,13 @@
 
 <?php
 
-$username = "true";
+$username = null;
 
-if(isset($username)){
-echo "The variable is valid";
+if(empty($username)){
+echo "The variable is empty";
 }
 else{
-    echo"The variable is Not valid";
+    echo"The variable is Not empty";
 }
 
 
