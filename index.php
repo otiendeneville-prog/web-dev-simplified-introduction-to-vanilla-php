@@ -1,19 +1,45 @@
 
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="index.php" method="post">
+        <label>Username:</label><br>
+        <input type="text" name="username"><br>
+        <label>Password:</label><br>
+        <input type="password" name="password"><br>
+        <input type="submit" name="login" value="Login">
+    </form>
+</body>
+</html>
 
 
 <?php
 
-$username = null;
+
+
+if(isset($_POST["login"])){
+
+$username = $_POST["username"];
+$password =$_POST["password"];
 
 if(empty($username)){
-echo "The variable is empty";
+    echo"Username is missing";
+    }
+    else{
+        echo"Hello {$username} <br>";
+    }
+
+    if(empty($password)){
+        echo"Password is missing";
+
+    }
+    else"Password is entered";
+
 }
-else{
-    echo"The variable is Not empty";
-}
-
-
-
 
 ?>
