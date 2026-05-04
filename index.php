@@ -1,20 +1,15 @@
-
 <?php
 
-$temp = 10000;
-$cloudy = false;
+function hypotenues($a ,$b){
+   $c = sqrt($a ** 2 + $b **2);
+return $c;
 
-if ($temp <0 || $temp > 30){
-echo"The weather is bad. <br>";
-}
-else{
-    echo"The weather is good. <br>";
-}
-if(!$cloudy){
-    echo"It's Sunny.";
-}
 
-else{
-    echo"It's cloudy.";
 }
+echo hypotenues(4,4)
+
+
 ?>
+
+
+
