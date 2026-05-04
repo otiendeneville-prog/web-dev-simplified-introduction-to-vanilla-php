@@ -12,6 +12,7 @@
       Username:<br>
       <input type="text" name="username"><br>
       <input type="email" name="email"><br>
+      <input type="text" name="age"><br>
       <input type="submit"name="login" value="login">
    </form>
 </body>
@@ -28,11 +29,16 @@ if (isset($_POST["login"])) {
    $email = filter_input(INPUT_POST,"email",
    FILTER_SANITIZE_EMAIL
    );
+   $age = filter_input(INPUT_POST,"age",
+   FILTER_VALIDATE_INT
+   );
 }
 
 echo "Hello {$username} <br>";
 
-echo " Your email is {$email}";
+echo " Your email is {$email} <br>";
+
+echo"You are {$age}";
 
 
 
