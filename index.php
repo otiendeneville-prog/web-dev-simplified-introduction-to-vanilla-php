@@ -1,18 +1,15 @@
 <?php
 
-function happy_birthday ($first_name, $age){
-   echo"Happy Birthday dear {$first_name}<br>";
-   echo"Happy Birthday to you <br>";
-   echo"You are {$age} years old <br>";
-   echo"Happy Birthday dear{$first_name} <br>";
+function hypotenues($a ,$b){
+   $c = sqrt($a ** 2 + $b **2);
+return $c;
+
+
 }
+echo hypotenues(4,4)
 
-happy_birthday("Sponge bob",22);
-
-happy_birthday("Terry",12);
-
-happy_birthday("Mollina",34);
 
 ?>
+
 
 
