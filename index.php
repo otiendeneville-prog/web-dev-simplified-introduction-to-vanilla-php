@@ -9,8 +9,9 @@
 
 <body>
    <form action="index.php" method="post">
-      <label>Username:</label><br>
+      Username:<br>
       <input type="text" name="username"><br>
+      <input type="email" name="email"><br>
       <input type="submit"name="login" value="login">
    </form>
 </body>
@@ -20,12 +21,18 @@
 
 <?php
 if (isset($_POST["login"])) {
-   $username = $_POST["username"];
+
+   $username = filter_input(INPUT_POST,"username",
+   FILTER_SANITIZE_SPECIAL_CHARS
+   );
+   $email = filter_input(INPUT_POST,"email",
+   FILTER_SANITIZE_EMAIL
+   );
 }
 
+echo "Hello {$username} <br>";
 
-
-echo "Hello {$username}";
+echo " Your email is {$email}";
 
 
 
