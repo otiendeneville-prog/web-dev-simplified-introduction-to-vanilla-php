@@ -23,6 +23,10 @@
 <?php
 if (isset($_POST["login"])) {
 
+if(empty($age)){
+   echo"That number is not valid";
+}
+
    $username = filter_input(INPUT_POST,"username",
    FILTER_SANITIZE_SPECIAL_CHARS
    );
@@ -38,8 +42,6 @@ echo "Hello {$username} <br>";
 
 echo " Your email is {$email} <br>";
 
-echo"You are {$age}";
-
-
+echo"You are {$age} years old ";
 
 ?>
