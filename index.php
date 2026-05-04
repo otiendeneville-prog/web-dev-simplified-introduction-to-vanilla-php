@@ -1,12 +1,9 @@
 <?php
 
-function hypotenues($a ,$b){
-   $c = sqrt($a ** 2 + $b **2);
-return $c;
+$username = "Bro Code";
+$username = strtolower("Bro Code");
 
-
-}
-echo hypotenues(4,4)
+echo $username;
 
 
 ?>
