@@ -1,20 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <form action="index.php" method="post">
+      <label>Username:</label><br>
+      <input type="text" name="username"><br>
+      <input type="submit"name="login" value="login">
+   </form>
+</body>
+
+</html>
+
+
 <?php
+if (isset($_POST["login"])) {
+   $username = $_POST["username"];
+}
 
-$username = "Bro Code";
-$phonenumber = 134-553-323;
 
 
-$username = strtolower("Bro Code");
-$username =trim($username);
-$username = strtoupper("Bro Code");
-$username = strrev($username);
-$phonenumber = str_replace("_", "", $phonenumber);
+echo "Hello {$username}";
 
-echo $phonenumber. "<br>";
-echo $username;
 
 
 ?>
-
-
-
