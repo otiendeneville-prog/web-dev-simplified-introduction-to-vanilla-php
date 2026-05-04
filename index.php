@@ -1,50 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
-</head>
-
-<body>
-   <form action="index.php" method="post">
-      Username:<br>
-      <input type="text" name="username"><br>
-      <input type="email" name="email"><br>
-      <input type="text" name="age"><br>
-      <input type="submit"name="login" value="login">
-   </form>
-</body>
-
-</html>
-
 
 <?php
-if (isset($_POST["login"])) {
 
-   $username = filter_input(INPUT_POST,"username",
-   FILTER_SANITIZE_SPECIAL_CHARS
-   );
-   $email = filter_input(INPUT_POST,"email",
-   FILTER_SANITIZE_EMAIL
-   );
-   $age = filter_input(INPUT_POST,"age",
-   FILTER_VALIDATE_INT
-   );
-   if(empty($age)){
-   echo"That number is not valid";
-}
-else{
-   echo"You are $age years old";
-}
+setcookie("fav_food","pizza", time() + (86400 *2),"/");
+setcookie("fav_drink", "coffe", time() + (86400 * 3), "/");
+setcookie("fav_desert","ice cream",time() +(864600 * 4), "/");
+
+
+foreach($_COOKIE as $key => $value){
+    echo"{$key} = {$value} <br>";
 
 }
-
-echo "Hello {$username} <br>";
-
-echo " Your email is {$email} <br>";
-
-echo"You are {$age} years old <br> ";
-
 ?>
+
+
