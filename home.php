@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 ?>
@@ -11,17 +10,17 @@ session_start();
     <title>Document</title>
 </head>
 <body>
-    This is Login Page:
-    <a href="home.php">This goes to the Home Page:</a><br>
+    This is the Home page:
+    <a href="index.php">This goes to Login Page:</a><br>
 </body>
 </html>
 
 <?php
 
-$_SESSION["username"] = "Bro Code";
-$_SESSION["password"] = "Pizza123";
+$_SESSION["username"] = "Neuville";
+$_SESSION["password"] = "pizza123";
 
-echo $_SESSION["username"] ."<br>";
-echo $_SESSION["password"] . "<br>"
+echo $_SESSION["username"]. "<br>";
+echo $_SESSION["password"]. "<br>";
 
 ?>
