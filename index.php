@@ -1,27 +1,42 @@
-
 <?php
 session_start();
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    This is Login Page:
-    <a href="home.php">This goes to the Home Page:</a><br>
+    <form action="index.php" method="post">
+        Username:
+        <input type="text" name="username"><br>
+        Password:
+        <input type="password" name="password"><br>
+        <input type="submit" name="login" value="login">
+    </form>
 </body>
+
 </html>
 
 <?php
 
-$_SESSION["username"] = "Bro Code";
-$_SESSION["password"] = "Pizza123";
+if (isset($_POST["login"])) {
 
-echo $_SESSION["username"] ."<br>";
-echo $_SESSION["password"] . "<br>"
+    if (!empty($_POST["username"]) && !empty($_POST["password"])) {
+        $_SESSION["username"] = $_POST["username"];
+        $_SESSION["password"] = $_POST["password"];
+    } else {
+        echo "Enter username/password";
+    }
+
+    echo $_SESSION["username"] . "<br>";
+    echo $_SESSION["password"];
+}
+
 
 ?>
