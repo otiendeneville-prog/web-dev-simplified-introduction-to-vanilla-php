@@ -34,8 +34,7 @@ if (isset($_POST["login"])) {
         echo "Enter username/password";
     }
 
-    echo $_SESSION["username"] . "<br>";
-    echo $_SESSION["password"];
+   header("location: home.php");
 }
 
 
