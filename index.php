@@ -1,41 +1,18 @@
 <?php
-session_start();
-?>
 
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+$password = "Neuville@11055";
+$harsh = password_hash($password, PASSWORD_DEFAULT);
 
-<body>
-    <form action="index.php" method="post">
-        Username:
-        <input type="text" name="username"><br>
-        Password:
-        <input type="password" name="password"><br>
-        <input type="submit" name="login" value="login">
-    </form>
-</body>
-
-</html>
-
-<?php
-
-if (isset($_POST["login"])) {
-
-    if (!empty($_POST["username"]) && !empty($_POST["password"])) {
-        $_SESSION["username"] = $_POST["username"];
-        $_SESSION["password"] = $_POST["password"];
-    } else {
-        echo "Enter username/password";
-    }
-
-   header("location: home.php");
-}
+echo $harsh;
 
 
 ?>
+
+
+
+
+
+
+
+
