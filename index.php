@@ -1,23 +1,29 @@
-<?php
 
 
-$password = "Neuville@11055";
-$harsh = password_hash($password, PASSWORD_DEFAULT);
+<?php 
+
+include("database.php");
+
+$username ="Neuville";
+$password = "clarity13";
+$hash = password_hash($password,PASSWORD_DEFAULT);
 
 
+$sql = "INSERT INTO users(user,password)
+                   VALUES('$username','$hash')";
 
-if(password_verify( "Neuville@11055", $harsh)){
-echo"You are loged in";
+try{
+    mysqli_query($conn, $sql);
+    echo"User is now registered";
+
 }
-else{
-    echo"Incorrect password!";
+catch(mysqli_sql_exception){
+  echo"Could not register user";
 }
+
+
+mysqli_close($conn);
+
+
+
 ?>
-
-
-
-
-
-
-
-
